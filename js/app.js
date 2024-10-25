@@ -34,16 +34,16 @@ Stampare a schermo la bici con peso minore.
      },
  ]
  let minPeso = bici[0].peso
+ let nomeMinPeso = bici[0].nome
  for(let i = 0; i < bici.length; i++) {
   
-     console.log(bici[i].peso)
      if (bici[i].peso < minPeso) {
-         console.log('sono entrato nel if')
+         
          minPeso = bici[i].peso
+         nomeMinPeso = bici[i].nome
      }
   
-     console.log(minPeso)
- }
+ }console.log(`la bici meno pesante è la numero: ${nomeMinPeso}`)
 
 
 
