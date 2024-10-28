@@ -35,7 +35,7 @@ Stampare a schermo la bici con peso minore.
  ]
  let minPeso = bici[0].peso
  let nomeMinPeso = bici[0].nome
- for(let i = 0; i < bici.length; i++) {
+ for(let i = 1; i < bici.length; i++) {
   
      if (bici[i].peso < minPeso) {
          
@@ -43,7 +43,7 @@ Stampare a schermo la bici con peso minore.
          nomeMinPeso = bici[i].nome
      }
   
- }console.log(`la bici meno pesante è la numero: ${nomeMinPeso}`)
+ }console.log(`la bici meno pesante è la numero: ${nomeMinPeso} : ${minPeso}`)
 
 
 
@@ -90,4 +90,26 @@ let nuovoArray = []
  console.log(nuovoArray)
 
 
+
+/*Snack 3 (Bonus)
+Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri. */
+
+const numeri = [1,2,3,4,5,6,7,8]
+
+const result = []
+function sliceArray (elements, start, end){
+    if(start < 0){
+        start = 0
+    }
+    if(end > elements.length){
+        end =  elements.length
+    }
+    for (i = start ; i < end ; i ++){
+        const el = elements[i]
+        console.log(i , el)
+        result.push(el)
+    }
+}
+sliceArray(numeri , 2 , 6)
 
